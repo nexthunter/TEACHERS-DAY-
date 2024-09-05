@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher's Day Cards</title>
+  <style>
+    /* Global Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #8e19f5, #f12711);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Container for Cards */
+    .cards-wrapper {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* 3D Flip Card Container */
+    .card-container {
+      perspective: 1000px;
+      width: 350px;
+      height: 250px;
+      margin: 10px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    /* The Card */
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateY(0deg);
+      transition: transform 1s;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+    }
+
+    /* Flip the card */
+    .card-container:hover .card {
+      transform: rotateY(180deg);
+    }
+
+    /* Card Front & Back */
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Front Side Design */
+    .card-front {
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    .card-front h1 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .card-front p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* Adding an Icon */
+    .card-front .icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #f5af19;
+    }
+
+    /* Card Back */
+    .card-back {
+      background-color: #f12711;
+      color: #fff;
+      transform: rotateY(180deg);
+    }
+
+    .card-back h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card-back p {
+      font-size: 16px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: auto;
+      color: purple;
+    }
+
+    /* Styling for Text Shadow Effect */
+    .card-back h1,
+    .card-back p {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Hover Effect for Front Text */
+    .card-front h1:hover {
+      color: #f12711;
+      transition: color 0.4s ease;
+    }
+
+    .card-front p:hover {
+      color: #f12711;
+      transition: color 0.4s ease;
+    }
+
+    /* Animation for Cards */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Staggered Delay for Each Card */
+    .card-container:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    .card-container:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .card-container:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    .card-container:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+
+    .card-container:nth-child(5) {
+      animation-delay: 1s;
+    }
+
+    .card-container:nth-child(6) {
+      animation-delay: 1.2s;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      .cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cards-wrapper">
+    <!-- Card 1 -->
+    <div class="card-container">
+      <div class="card">
+        <!-- Front Side -->
+        <div class="card-front">
+          <div class="icon">🎓</div>
+          <h1>Happy Teacher's Day!</h1>
+          <p>Thank you for your guidance!</p>
+        </div>
+        <!-- Back Side -->
+        <div class="card-back">
+          <h1>Thank You!</h1>
+          <p>Your dedication shapes futures. Forever grateful!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card-container">
+      <div class="card">
+        <!-- Front Side -->
+        <div class="card-front">
+          <div class="icon">📚</div>
+          <h1>You're the Best!</h1>
+          <p>Thank you for your wisdom!</p>
+        </div>
+        <!-- Back Side -->
+        <div class="card-back">
+          <h1>We Appreciate You!</h1>
+          <p>"To the best teacher, your dedication and passion inspire us every day. Your unwavering support and
+            guidance make you exceptional. Thank you for being a true role model and making learning a joy."
+
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-container">
+      <div class="card">
+        <!-- Front Side -->
+        <div class="card-front">
+          <div class="icon">🏅</div>
+          <h1>You Inspire Everyone!</h1>
+          <p>Thank you for the motivation!</p>
+        </div>
+        <!-- Back Side -->
+        <div class="card-back">
+          <h1>Grateful!</h1>
+          <p>" You're a role model, inspiring all. Thank you for everything! Your unwavering dedication and passion
+            inspire everyone around you. The ability to motivate and uplift others is truly remarkable. Thank you for
+            being a shining example and making a difference."
+
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card-container">
+      <div class="card">
+        <!-- Front Side -->
+        <div class="card-front">
+          <div class="icon">🌟</div>
+          <h1>Guiding Star!</h1>
+          <p>Always showing the right path!</p>
+        </div>
+        <!-- Back Side -->
+        <div class="card-back">
+          <h1>Deep Appreciation!</h1>
+          <p>Your wisdom lights the way for success and growth!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card-container">
+      <div class="card">
+        <!-- Front Side -->
+        <div class="card-front">
+          <div class="icon">💡</div>
+          <h1>True Mentor!</h1>
+          <p>Your advice is always valuable!</p>
+        </div>
+        <!-- Back Side -->
+        <div class="card-back">
+          <h1>Endless Gratitude!</h1>
+          <p>Your guidance has been a gift beyond words!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card-container">
+      <div class="card">
+        <!-- Front Side -->
+        <div class="card-front">
+          <div class="icon">❤️</div>
+          <h1>Thank You Always!</h1>
+          <p>Your kindness makes the difference!</p>
+        </div>
+        <!-- Back Side -->
+        <div class="card-back">
+          <h1>Forever Thankful!</h1>
+          <p>"The support you've given changes lives for the better! Thank you for your incredible dedication and
+            support. Your guidance has made a significant impact on our lives. We truly appreciate all you do and are
+            grateful for your hard work and commitment."
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="space1"></div>
+  <div class="space2"></div>
+  <div class="space3"></div>
+  <div class="space4"></div>
+  <div class="space5"></div>
+  <div class="space6"></div>
+  <div class="space7"></div>
+  <div class="space8"></div>
+  <div class="space9"></div>
+  <div class="space10"></div>
+  <footer>
+    <p>probably you wont even read this i think but still i will write this yeah i k its not much its not even
+      attractuve
+      its justt basic website i making for you , for your all hardwork you put in ur studnets lifes and make them better
+      indeed you are one of the best tecahers they have . i m trying and i will keep trying inshalla idk if my presence
+      matters or not anyways i should just stop here and say and Appreciate how amazing teacher you are you are best my
+      albatross</p>
+  </footer>
+
+</body>
+
+</html>
